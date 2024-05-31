@@ -29,7 +29,7 @@ public class ExecuteQuery02 {
         }
 
         System.out.println("********** Task 1 Using SUBQUERY **********");
-        //Task-1: Print department name and grade of department which has the second highest pass_grade
+        //Task-1: Print department name and grade of department which has the second-highest pass_grade
         String query2 = "SELECT department, pass_grade FROM departments WHERE pass_grade = " +
                 "(SELECT MAX(pass_grade) FROM departments WHERE pass_grade <  (SELECT MAX(pass_grade) FROM departments))";
 

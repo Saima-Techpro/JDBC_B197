@@ -48,7 +48,7 @@ CREATE TABLE companies (
       department varchar(20)
     );
 
-    INSERT INTO students VALUES(100, 'Ahmet Umit', 'İstanbul', 546, 'Comp.Eng');
+    INSERT INTO students VALUES(100, 'Ahmet Umit', 'İstanbul', 546, 'Comp.Eng.');
     INSERT INTO students VALUES(101, 'R.Nuri Tekin', 'Antalya', 486, 'Management');
     INSERT INTO students VALUES(102, 'S.Faik Faruk', 'Bursa', 554, 'Comp.Eng.');
     INSERT INTO students VALUES(103, 'Yasar Kemal', 'İstanbul', 501, 'Mathematics');
@@ -136,12 +136,12 @@ CREATE TABLE companies (
 
 
  CREATE TABLE accounts(
-         account_nu int UNIQUE,
+         account_num int UNIQUE,
          name VARCHAR(50),
          amount real
      );
 
-INSERT INTO accounts VALUES(1234, 'Fred',9500.5);
-INSERT INTO accounts VALUES(5678, 'Barnie',6500.3);
+INSERT INTO accounts VALUES(1234, 'Fred',9500.50);
+INSERT INTO accounts VALUES(5678, 'Barnie',5500.80);
 
 SELECT * FROM accounts;

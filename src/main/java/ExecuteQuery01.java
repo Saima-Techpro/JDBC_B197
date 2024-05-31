@@ -84,8 +84,10 @@ public class ExecuteQuery01 {
         String query4 = "SELECT name, grade FROM students s INNER JOIN departments d ON s.department = d.department  WHERE s.grade > d.pass_grade";
 
         ResultSet resultSet4 = statement.executeQuery(query4);
-        String names ;
+        String names;
         while (resultSet4.next()){
+            names = resultSet4.getString(1);
+            System.out.println("names = " + names);
             System.out.println(resultSet4.getString(1) + "--" + resultSet4.getInt(2));
 
         }

@@ -8,12 +8,10 @@ public class Transaction02 {
         // Create a Statement
         Statement statement = connection.createStatement();
 
-
         // Execute SQL query
+        //TASK-1. Transfer amount of 1000 from account_num:1234 to account_num:5678
 
-        //TASK-1. Transfer amount of 1000 from account_nu:1234 to account_nu:5678
-
-        String query = "UPDATE accounts SET amount = amount + ? WHERE account_nu = ? " ;
+        String query = "UPDATE accounts SET amount = amount + ? WHERE account_num = ? " ;
 
         PreparedStatement prs1 = connection.prepareStatement(query);
 

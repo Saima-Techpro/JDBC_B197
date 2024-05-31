@@ -12,12 +12,11 @@ public class Transaction03_HappyScenario {
         connection.setAutoCommit(false);  // we switched off the auto shipping
 
         // Execute SQL query
-
         //TASK-1. Transfer amount of 1000 from account_nu:1234 to account_nu:5678
 
-        String query = "UPDATE accounts SET amount = amount + ? WHERE account_nu = ? " ;
-
+        String query = "UPDATE accounts SET amount = amount + ? WHERE account_num = ? " ;
         PreparedStatement prs1 = connection.prepareStatement(query);
+
         Savepoint savepoint = null;
 
         try{
@@ -44,7 +43,7 @@ public class Transaction03_HappyScenario {
             prs1.setInt(2, 5678);
             prs1.executeUpdate();
 
-            connection.commit();
+            connection.commit();  // we switched on the auto shipping
             System.out.println("Transaction was successful!!");
             connection.close();
 
