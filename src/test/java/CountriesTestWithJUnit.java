@@ -51,6 +51,7 @@ public class CountriesTestWithJUnit {
         // Assert.assertEquals("John", "john");
         Assert.assertEquals(13, counter );
 
+        JDBCUtils.closeStatementAndConnection();
 
 
 
